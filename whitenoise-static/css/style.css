@@ -9,33 +9,35 @@
 
 @font-face {
   font-family: "iransans";
-    src: url('fonts/iransans_medium.eot'); /* IE9 Compat Modes */
-    src: url('fonts/iransans_medium.woff2') format('woff2'), /* Super Modern Browsers */
-         url('fonts/iransans_medium.woff') format('woff'), /* Pretty Modern Browsers */
-         url('fonts/iransans_medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+    src: url('/static/fonts/iransans_medium.eot'); /* IE9 Compat Modes */
+    src: url('/static/fonts/iransans_medium.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/static/fonts/iransans_medium.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/static/fonts/iransans_medium.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 @font-face {
   font-family: "iransans";
-  src: url('fonts/iransans_medium.eot'); /* IE9 Compat Modes */
-  src: url('fonts/iransans_medium.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/iransans_medium.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/iransans_medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('/static/fonts/iransans_medium.eot'); /* IE9 Compat Modes */
+  src: url('/static/fonts/iransans_medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/static/fonts/iransans_medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/static/fonts/iransans_medium.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: bold;
 }
 
 body {
   overflow-x: hidden;
-  position: relative; }
+  position: relative; 
+
+}
 
 body {
-  /* font-family: "iransans", sans-serif; */
-  font-family: "iransans";
+  font-family: "iransans", sans-serif;
 
   font-weight: 400;
   line-height: 28px;
   color: #6a6a6a;
   font-size: 14px;
+  direction: rtl;
   background-color: #eff2f1; }
 
 a {
@@ -124,14 +126,14 @@ a {
       padding: calc(4rem - 30px) 0 4rem 0; } }
   @media (min-width: 992px) {
     .hero {
-      padding: calc(8rem - 30px) 0 8rem 0; } }
+      padding: calc(6rem - 30px) 0 8rem 0; } }
   .hero .intro-excerpt {
     position: relative;
     z-index: 4; }
     @media (min-width: 992px) {
       .hero .intro-excerpt {
-        max-width: 450px; } }
-  .hero h1 {
+        max-width: 600px; } }
+  .hero h2 {
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 30px; }
@@ -140,7 +142,8 @@ a {
         font-size: 54px; } }
   .hero p {
     color: rgba(255, 255, 255, 0.5);
-    margin-botom: 30px; }
+    margin-bottom: 30px; 
+  }
   .hero .hero-img-wrap {
     position: relative; }
     .hero .hero-img-wrap img {
@@ -152,19 +155,19 @@ a {
       left: -20px; }
       @media (min-width: 768px) {
         .hero .hero-img-wrap img {
-          right: 0px;
-          left: -100px; } }
+          left: 0px;
+          right: -100px; } }
       @media (min-width: 992px) {
         .hero .hero-img-wrap img {
-          left: 0px;
+          right: 0px;
           top: -80px;
           position: absolute;
-          right: -50px; } }
+          left: -50px; } }
       @media (min-width: 1200px) {
         .hero .hero-img-wrap img {
-          left: 0px;
+          right: 0px;
           top: -80px;
-          right: -100px; } }
+          left: -100px; } }
     .hero .hero-img-wrap:after {
       content: "";
       position: absolute;
@@ -203,7 +206,9 @@ a {
   .btn.btn-secondary {
     color: #2f2f2f;
     background: #f9bf29;
-    border-color: #f9bf29; }
+    border-color: #f9bf29; 
+    margin-left: 20px;
+  }
     .btn.btn-secondary:hover {
       background: #f8b810;
       border-color: #f8b810; }

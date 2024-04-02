@@ -1,5 +1,5 @@
 from .models import Category
 
 def product_categories(request):
-    links = Category.objects.all()
-    return {'links': links}
+    cats = Category.objects.all()
+    return {'product_categories': cats}
