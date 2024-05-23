@@ -5,7 +5,6 @@ from django.http import HttpResponse
 
 
 def single_category(request, the_slug):
-    print(the_slug)
     template = loader.get_template('single_cat.html')
 
     context = {

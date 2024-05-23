@@ -63,9 +63,11 @@ class User(AbstractBaseUser):
     joinied_date = models.DateTimeField(auto_now_add=True)
     bio = models.CharField(max_length=500, blank = True)
 
-
+    #Show account is active or not. it is better deactive instead of delete beacuse of foriegin key
     is_active = models.BooleanField(default=True)
+    #show this user can access to admin panel
     is_staff = models.BooleanField(default=False)
+    #treats this user as having all permissions 
     is_superuser = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'phone_number'
@@ -73,9 +75,11 @@ class User(AbstractBaseUser):
 
     objects = userManager()
 
+    #standard function
     def has_perm(self, perm, obj=None):
         return self.is_superuser
 
+    #standard function
     def has_module_perms(self, app_label):
         return self.is_superuser
 

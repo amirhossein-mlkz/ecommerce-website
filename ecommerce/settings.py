@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'category',
     'user',
     'store',
+    'carts',
 ]
 
 MIDDLEWARE = [
@@ -140,5 +141,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
-
+#change defualt user model to your custom model
 AUTH_USER_MODEL = 'user.User'

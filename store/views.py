@@ -28,8 +28,11 @@ def product_details(request, category_slug=None, product_slug=None):
 
     #product = get_object_or_404(Product, slug=product_slug)
     try:
+        #.get methed return one and only one object but .filter return mulit object or empty list
+        # category__slug means slug atribut of category model of this product (category is foriegin key)
         product = Product.objects.get(category__slug=category_slug, slug=product_slug)
-    except:
+    except Exception as e:
+        print(e)
         product = None
     template = loader.get_template('product-details.html')
 

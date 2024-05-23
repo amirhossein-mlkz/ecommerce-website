@@ -16,6 +16,8 @@ class Category(models.Model):
         verbose_name_plural = 'categories'
     
     def get_url(self,):
+        #reverse function generation a url, first arg is name of path in urls.py and 
+        #second arg is the argument of that path
         return reverse( 'store_by_category', args=(self.slug,))
 
     def __str__(self) -> str:

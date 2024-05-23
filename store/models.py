@@ -1,10 +1,14 @@
 from django.db import models
 from category.models import Category
 from django.urls import reverse
+from django.utils.html import format_html
+
 # Create your models here.
 
 class productImage(models.Model):
     image = models.ImageField(upload_to='photos/gallery/')
+
+
 
 class Product(models.Model):
 

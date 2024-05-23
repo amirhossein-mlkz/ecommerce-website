@@ -17,7 +17,6 @@ class productAdmin(admin.ModelAdmin):
 
 
 class imageAdmin(admin.ModelAdmin):
-    fields = ( 'image',)
     list_display = ['display_image']
 
     def display_image(self, obj):
